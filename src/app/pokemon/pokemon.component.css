@@ -24,6 +24,19 @@ img {
     margin: 10px auto;
 }
 
+.pokemon-image {
+    position: relative;
+}
+
+.pokemon-image a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 :host {
     padding: 5px;
 }

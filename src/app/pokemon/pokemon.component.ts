@@ -7,7 +7,7 @@ import { PoketeamSharedService } from '../poketeam.shared.service';
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.css']
+  styleUrls: ['./pokemon.component.css'],
 })
 export class PokemonComponent implements OnInit {
    @Input() pokemon: Pokemon;

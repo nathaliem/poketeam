@@ -22,7 +22,7 @@ export class PoketeamSharedService {
     }
 
     removeByAttribute(array, attribute, value) {
-        var i = array.length;
+        let i = array.length;
         while (i--) {
             if (array[i]
                 && array[i].hasOwnProperty(attribute)
@@ -34,7 +34,7 @@ export class PoketeamSharedService {
     }
 
     checkByAttribute(array, attribute, value) {
-        var i = array.length;
+        let i = array.length;
         while (i--) {
             if (array[i]
                 && array[i].hasOwnProperty(attribute)

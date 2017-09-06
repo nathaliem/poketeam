@@ -3,8 +3,8 @@
         Pokéteam
     </h1>
     <!-- get all pokemon of first generation from pokeapi -->
-     <div class="poketeam--container row" *ngIf="poketeam">
-        <app-pokemon class="col col-3" *ngFor="let pokemon of poketeam" [pokemon]="pokemon" (pokemonToAdd)="removePokemonFromTeam($event)" [isPoketeam]="isPoketeam"></app-pokemon>
+     <div class="poketeam--container row" *ngIf="poketeam" dnd-sortable-container [sortableData]="poketeam">
+        <app-pokemon class="col col-3" *ngFor="let pokemon of poketeam;let x = index" [pokemon]="pokemon" (pokemonToAdd)="removePokemonFromTeam($event)" [isPoketeam]="isPoketeam" dnd-sortable [dragData]="pokemon" [sortableIndex]="x" [dragEnabled]="!dragOperation"></app-pokemon>
     </div>
     <div class="poketeam--container container row" *ngIf="poketeam.length == 0">
         <p>

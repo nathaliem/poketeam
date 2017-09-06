@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, AfterContentChecked } from '@angular/core';
 import { Pokemon } from '../pokemon.model';
 import { PoketeamSharedService } from '../poketeam.shared.service';
+import { DndModule } from 'ng2-dnd';
 
 import * as myGlobals from '../globals';
 
@@ -13,6 +14,7 @@ export class PoketeamComponent implements OnInit, AfterContentChecked {
   poketeam: Pokemon[] = myGlobals.poketeam;
   isPoketeam = true;
   totalPower: number = 0;
+  dragOperation:boolean = false;
 
   constructor(private poketeamService: PoketeamSharedService) { }
 

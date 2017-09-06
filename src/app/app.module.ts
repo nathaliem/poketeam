@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DndModule } from 'ng2-dnd';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
@@ -15,6 +16,7 @@ import { PoketeamComponent } from './poketeam/poketeam.component';
 import { PokeapiService } from './pokeapi.service';
 import { PoketeamSharedService } from './poketeam.shared.service';
 
+import { CapitalizePipe } from './capitalize.pipe';
 import { LowercaseArrayPipe } from './lowercase_array.pipe';
 
 @NgModule({
@@ -23,6 +25,7 @@ import { LowercaseArrayPipe } from './lowercase_array.pipe';
     PokemonComponent,
     PokedexComponent,
     PoketeamComponent,
+    CapitalizePipe,
     LowercaseArrayPipe
   ],
   imports: [
@@ -30,7 +33,8 @@ import { LowercaseArrayPipe } from './lowercase_array.pipe';
     RouterModule,
     AppRoutingModule,
     HttpModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    DndModule.forRoot()
   ],
   providers: [
       PokeapiService,
