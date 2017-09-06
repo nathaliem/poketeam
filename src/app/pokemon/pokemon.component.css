@@ -1,0 +1,206 @@
+/*
+GRASS: rgb(105, 194, 61);
+POISON: rgb(146, 58, 146);
+FIRE: rgb(237, 109, 18);
+FLYING: rgb(142, 111, 235);
+WATER: rgb(69, 120, 237);
+BUG: rgb(151, 165, 29);
+NORMAL: rgb(156, 156, 99);
+ELECTRIC: rgb(246, 201, 19);
+GROUND: rgb(219, 181, 77);
+FAIRY: rgb(232, 120, 144);
+FIGHTING: rgb(174, 42, 36);
+PSYCHIC: rgb(247, 54, 112);
+ROCK: rgb(164, 143, 50);
+STEEL: rgb(160, 160, 192);
+ICE: rgb(126, 206, 206);
+GHOST: rgb(100, 78, 136);
+DRAGON: rgb(94, 29, 247);
+ */
+
+img {
+    max-width: 65%;
+    display: block;
+    margin: 10px auto;
+}
+
+:host {
+    padding: 5px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h2 span {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f1f1f1;
+    padding: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #000;
+    margin-right: 10px;
+}
+
+.types {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.types li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.types li + li {
+    margin-left: 7px;
+}
+
+button {
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 5px 12px;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #fefefe;
+    border: 1px solid #f1f1f1;
+}
+
+.grass {
+    border-color: rgb(105, 194, 61);
+    color: rgb(105, 194, 61);
+    background-color: rgb(105, 194, 61);
+}
+
+.poison {
+    border-color: rgb(146, 58, 146);
+    color: rgb(146, 58, 146);
+    background-color: rgb(146, 58, 146);
+}
+
+.fire {
+    border-color: rgb(237, 109, 18);
+    color: rgb(237, 109, 18);
+    background-color: rgb(237, 109, 18);
+}
+
+.flying {
+    border-color: rgb(142, 111, 235);
+    color: rgb(142, 111, 235);
+    background-color: rgb(142, 111, 235);
+}
+
+.water {
+    border-color: rgb(69, 120, 237);
+    color: rgb(69, 120, 237);
+    background-color: rgb(69, 120, 237);
+}
+
+.bug {
+    border-color: rgb(151, 165, 29);
+    color: rgb(151, 165, 29);
+    background-color: rgb(151, 165, 29);
+}
+
+.normal {
+    border-color: rgb(156, 156, 99);
+    color: rgb(156, 156, 99);
+    background-color: rgb(156, 156, 99);
+}
+
+.electric {
+    border-color: rgb(246, 201, 19);
+    color: rgb(246, 201, 19);
+    background-color: rgb(246, 201, 19);
+}
+
+.ground {
+    border-color: rgb(219, 181, 77);
+    color: rgb(219, 181, 77);
+    background-color: rgb(219, 181, 77);
+}
+
+.fairy {
+    border-color: rgb(232, 120, 144);
+    color: rgb(232, 120, 144);
+    background-color: rgb(232, 120, 144);
+}
+
+.fighting {
+    border-color: rgb(174, 42, 36);
+    color: rgb(174, 42, 36);
+    background-color: rgb(174, 42, 36);
+}
+
+.psychic {
+    border-color: rgb(247, 54, 112);
+    color: rgb(247, 54, 112);
+    background-color: rgb(247, 54, 112);
+}
+
+.rock {
+    border-color: rgb(164, 143, 50);
+    color: rgb(164, 143, 50);
+    background-color: rgb(164, 143, 50);
+}
+
+.steel {
+    border-color: rgb(160, 160, 192);
+    color: rgb(160, 160, 192);
+    background-color: rgb(160, 160, 192);
+}
+
+.ice {
+    border-color: rgb(126, 206, 206);
+    color: rgb(126, 206, 206);
+    background-color: rgb(126, 206, 206);
+}
+
+.ghost {
+    border-color: rgb(100, 78, 136);
+    color: rgb(100, 78, 136);
+    background-color: rgb(100, 78, 136);
+}
+
+.dragon {
+    border-color: rgb(94, 29, 247);
+    color: rgb(94, 29, 247);
+    background-color: rgb(94, 29, 247);
+}
+
+.pokemon {
+    border: 10px solid;
+    padding: 15px;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+    background-color: #fff;
+}
+
+/*.pokemon:hover {
+    border: 5px solid;
+}*/

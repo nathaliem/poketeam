@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <h1>
+        Pokéteam
+    </h1>
+    <!-- get all pokemon of first generation from pokeapi -->
+     <div class="poketeam--container container-fluid row" *ngIf="poketeam">
+        <app-pokemon class="col col-3" *ngFor="let pokemon of poketeam" [pokemon]="pokemon" (pokemonToAdd)="removePokemonFromTeam($event)" [isPoketeam]="isPoketeam"></app-pokemon>
+    </div>
+    <div class="total container" *ngIf="totalPower">
+        Your total experience with this team is <strong>{{totalPower}}</strong>
+    </div>
+</div>

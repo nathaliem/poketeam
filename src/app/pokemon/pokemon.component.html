@@ -1,0 +1,11 @@
+<div class="pokemon" [ngClass]="pokemon.types|lowercase_array|slice:0:1">
+    <h2><span>{{pokemon.order}}</span>{{pokemon.name}}</h2>
+    <img src="../assets/data/img/{{pokemon.order}}{{pokemon.name_raw}}.png" alt="{{pokemon.name}}">
+    <ul class="types">
+        <li *ngFor="let type of pokemon.types" [ngClass]="type|lowercase">
+            {{type|uppercase}}
+        </li>
+    </ul>
+    <button *ngIf="isPokedex" type="button" class="add-to-team" (click)="addToTeam(pokemon)" [disabled]="poketeam.length > 5">Add to my team</button>
+    <button *ngIf="isPoketeam" type="button" class="remove-from-team" (click)="removeFromTeam(pokemon)">Remove from my team</button>
+</div>
