@@ -88,7 +88,15 @@ button {
 button:hover {
     cursor: pointer;
     background-color: #fefefe;
-    border: 1px solid #f1f1f1;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+button[disabled]:hover {
+    cursor: default;
+    background-color: #f1f1f1;
 }
 
 .grass {

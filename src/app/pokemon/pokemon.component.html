@@ -6,6 +6,10 @@
             {{type|uppercase}}
         </li>
     </ul>
-    <button *ngIf="isPokedex" type="button" class="add-to-team" (click)="addToTeam(pokemon)" [disabled]="poketeam.length > 5">Add to my team</button>
+    <button *ngIf="isPokedex" type="button" class="add-to-team" (click)="addToTeam(pokemon);" [disabled]="poketeam.length > 5 || isPartOfTeam(pokemon)">
+        <span *ngIf="!isPartOfTeam(pokemon) && poketeam.length < 6">Add to my team</span>
+        <span *ngIf="!isPartOfTeam(pokemon) && poketeam.length > 5">Team is full</span>
+        <span *ngIf="isPartOfTeam(pokemon)">Added to my team</span>
+    </button>
     <button *ngIf="isPoketeam" type="button" class="remove-from-team" (click)="removeFromTeam(pokemon)">Remove from my team</button>
 </div>
