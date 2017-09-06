@@ -3,10 +3,15 @@
         Pokéteam
     </h1>
     <!-- get all pokemon of first generation from pokeapi -->
-     <div class="poketeam--container container-fluid row" *ngIf="poketeam">
+     <div class="poketeam--container row" *ngIf="poketeam">
         <app-pokemon class="col col-3" *ngFor="let pokemon of poketeam" [pokemon]="pokemon" (pokemonToAdd)="removePokemonFromTeam($event)" [isPoketeam]="isPoketeam"></app-pokemon>
     </div>
-    <div class="total container" *ngIf="totalPower">
-        Your total experience with this team is <strong>{{totalPower}}</strong>
+    <div class="poketeam--container container row" *ngIf="poketeam.length == 0">
+        <p>
+            You haven't added any Pokémon to your team yet! Add some by going back to the <a href="/">Pokédex</a> and click "Add to my team".
+        </p>
     </div>
+    <!--<div class="total container" *ngIf="totalPower">
+        Your total experience with this team is <strong>{{totalPower}}</strong>
+    </div>-->
 </div>

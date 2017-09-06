@@ -25,8 +25,9 @@ export class PokemonComponent implements OnInit {
   }
 
   addToTeam(pokemon: Pokemon) {
-    this.pokemonToAdd.emit(pokemon);
-    //this.open(this.content);
+    if ( !this.isPartOfTeam(pokemon) ) {
+      this.pokemonToAdd.emit(pokemon);
+    }
   }
 
   removeFromTeam(pokemon: Pokemon) {
@@ -38,7 +39,6 @@ export class PokemonComponent implements OnInit {
   }
 
   isPartOfTeam(pokemon: Pokemon) {
-    //console.log(this.poketeamService.checkByAttribute(this.poketeam, 'id', pokemon['id']));
     return this.poketeamService.checkByAttribute(this.poketeam, 'id', pokemon['id']);
   }
 
