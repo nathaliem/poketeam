@@ -1,0 +1,7 @@
+:host-context(.pokedex--dropzone) p {
+    display: none;
+}
+
+:host {
+    width: 100%;
+}

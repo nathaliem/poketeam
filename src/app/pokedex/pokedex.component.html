@@ -4,8 +4,21 @@
     </h1>
     <!-- get all pokemon of first generation from pokeapi -->
      <div class="pokedex--container row align-items-center justify-content-center" *ngIf="pokedex">
-        <app-pokemon class="col-2 col-sm-12 col-md-3" *ngFor="let pokemon of pokedex" [pokemon]="pokemon" (pokemonToAdd)="addPokemonToTeam($event)" [isPokedex]="isPokedex"></app-pokemon>
+        <app-pokemon class="col-2 col-sm-12 col-md-3" *ngFor="let pokemon of pokedex" [pokemon]="pokemon" (pokemonToAdd)="addPokemonToTeam($event)" [isPokedex]="isPokedex" dnd-draggable [dragEnabled]="true" [dragData]="pokemon" (onDragStart)="onDragStart()" (onDragEnd)="onDragEnd()"></app-pokemon>
     </div>
     <!-- add field at side/bottom/top when dragging a Pokémon so it can be added to team -->
     <!-- when succeeded -> onDropSuccess -> addPokemonToTeam -->
+    <div class="pokedex--dropzone" [ngClass]="{'show': isDragging}" dnd-droppable (onDropSuccess)="onDropSuccess($event)">
+        <div class="container row align-items-center justify-content-center">
+
+            <footer *ngIf="poketeam.length == 0">
+                <p>Drop your Pokémon here...</p>
+            </footer>
+            <div class="poketeam--container">
+                <div *ngFor="let pokemon of poketeam">
+                    <app-pokemon [pokemon]="pokemon"></app-pokemon>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

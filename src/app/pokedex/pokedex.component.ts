@@ -15,6 +15,8 @@ import * as myGlobals from '../globals';
 export class PokedexComponent implements OnInit {
   pokedex = [];
   isPokedex = true;
+  poketeam: Pokemon[] = myGlobals.poketeam;
+  isDragging: boolean = false;
 
   constructor(private pokeapiService: PokeapiService, private poketeamService: PoketeamSharedService) {
 
@@ -60,6 +62,19 @@ export class PokedexComponent implements OnInit {
 
   removePokemonFromTeam(pokemon: Pokemon) {
       return false;
+  }
+
+  onDragStart() {
+    this.isDragging = true;
+  }
+
+  onDragEnd() {
+    this.isDragging = false;
+  }
+
+  onDropSuccess($event) {
+    let pokemonToAdd = $event.dragData;
+    this.addPokemonToTeam(pokemonToAdd);
   }
 
 }
