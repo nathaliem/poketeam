@@ -2,7 +2,7 @@
     <h2><span>{{pokemon.order}}</span>{{pokemon.name}}</h2>
     <div class="pokemon-image">
         <a (click)="open(content)"></a>
-        <img src="../assets/data/img/{{pokemon.order}}{{pokemon.name_raw}}.png" alt="{{pokemon.name}}">
+        <img src="assets/data/img/{{pokemon.order}}{{pokemon.name_raw}}.png" alt="{{pokemon.name}}">
     </div>
     <ul class="types">
         <li *ngFor="let type of pokemon.types" [ngClass]="type|lowercase">
