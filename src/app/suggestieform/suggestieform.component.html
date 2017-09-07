@@ -1,0 +1,19 @@
+<h2>
+    Suggestie toevoegen
+</h2>
+<p>
+    Heb je een idee voor een nieuwe feature? Laat het ons weten!
+</p>
+<form (ngSubmit)="onSubmit(suggestieForm)" #suggestieForm="ngForm" novalidate>
+    <div>
+        <label for="nameField">Naam</label>
+        <input type="text" name="nameField" id="nameField" [ngModel]="name" required>
+    </div>
+    <div>
+        <label for="suggestionField">Suggestie</label>
+        <textarea name="suggestionField" id="suggestionField" [ngModel]="suggestion" required></textarea>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!suggestieForm.form.valid">Suggestie toevoegen</button>
+    </div>
+</form>

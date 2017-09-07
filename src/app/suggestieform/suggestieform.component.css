@@ -1,0 +1,47 @@
+:host {
+    margin-top: 55px;
+    display: block;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, textarea {
+    border: 0;
+    outline: 0;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 300px;
+    background-color: #f1f1f1;
+    padding: 5px 12px;
+}
+
+button {
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #fefefe;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+button[disabled]:hover {
+    cursor: default;
+    background-color: #f1f1f1;
+}

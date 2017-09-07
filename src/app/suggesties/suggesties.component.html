@@ -1,0 +1,8 @@
+<div class="container-fluid container">
+    <h1>Feature Requests</h1>
+    <div class="suggestie" *ngFor="let suggestie of suggesties">
+        <h2>{{suggestie.name}}</h2>
+        <p>{{suggestie.suggestion}}</p>
+    </div>
+    <app-suggestieform (submitted)="addSuggestie($event)"></app-suggestieform>
+</div>

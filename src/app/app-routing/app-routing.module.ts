@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { PokedexComponent } from '../pokedex/pokedex.component';
 import { PoketeamComponent } from '../poketeam/poketeam.component';
+import { SuggestiesComponent } from '../suggesties/suggesties.component';
 
 const routes: Routes = [
     {
@@ -13,6 +14,10 @@ const routes: Routes = [
     {
         path: 'my-team',
         component: PoketeamComponent
+    },
+    {
+        path: 'suggesties',
+        component: SuggestiesComponent
     }
 ];
 

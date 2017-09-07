@@ -3,6 +3,7 @@
 
 body {
     /*font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-size: 16px;
 }
 
 .container-fluid {
@@ -10,8 +11,16 @@ body {
     padding-bottom: 30px;
 }
 
-h1 {
+h1,
+h2 {
     font-weight: bold;
     text-transform: uppercase;
+}
+
+h1 {
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
 }
