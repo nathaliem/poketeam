@@ -64,17 +64,4 @@ export class PokedexComponent implements OnInit {
       return false;
   }
 
-  onDragStart() {
-    this.isDragging = true;
-  }
-
-  onDragEnd() {
-    this.isDragging = false;
-  }
-
-  onDropSuccess($event) {
-    let pokemonToAdd = $event.dragData;
-    this.addPokemonToTeam(pokemonToAdd);
-  }
-
 }
