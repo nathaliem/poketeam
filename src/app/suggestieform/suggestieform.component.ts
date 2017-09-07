@@ -15,7 +15,6 @@ export class SuggestieformComponent implements OnInit {
   }
 
   onSubmit(form) {
-      console.log('submitted');
       // In theory I can call the function from the SuggestiesService here
       // But I'll call an EventEmitter just because :)
       this.submitted.emit({

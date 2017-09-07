@@ -7,11 +7,11 @@
 <form (ngSubmit)="onSubmit(suggestieForm)" #suggestieForm="ngForm" novalidate>
     <div>
         <label for="nameField">Naam</label>
-        <input type="text" name="nameField" id="nameField" [ngModel]="name" required>
+        <input type="text" name="nameField" id="nameField" required>
     </div>
     <div>
         <label for="suggestionField">Suggestie</label>
-        <textarea name="suggestionField" id="suggestionField" [ngModel]="suggestion" required></textarea>
+        <textarea name="suggestionField" id="suggestionField" required></textarea>
     </div>
     <div>
         <button type="submit" [disabled]="!suggestieForm.form.valid">Suggestie toevoegen</button>

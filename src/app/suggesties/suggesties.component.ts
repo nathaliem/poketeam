@@ -12,8 +12,6 @@ export class SuggestiesComponent implements OnInit {
   constructor(private suggestiesService: SuggestiesService) { }
 
   ngOnInit() {
-      //this.suggestiesService.getSuggesties().then(suggesties => this.suggesties);
-      console.log(this.suggestiesService.getSuggesties());
       this.suggesties = this.suggestiesService.getSuggesties();
   }
 

@@ -7,8 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PokeapiService {
-    //url = 'http://pokeapi.co/api/v2/pokemon/?limit=10'
-    url = '../assets/data/pokemon.json';
+    url = 'assets/data/pokemon.json';
 
   constructor(private http:Http) { }
 

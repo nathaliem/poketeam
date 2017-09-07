@@ -1,12 +1,12 @@
 export class Pokemon {
     constructor(
         private id: number,
-        private name: string,
-        private base_experience: number,
-        private height: string,
-        private weight: string,
-        private order: number,
-        private types: string[],
-        private name_raw: string,
+        public name: string,
+        public base_experience: number,
+        public height: string,
+        public weight: string,
+        public order: number,
+        public types: string[],
+        public name_raw: string,
     ){}
 }
