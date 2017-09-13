@@ -16,7 +16,7 @@ const routes: Routes = [
         component: PoketeamComponent
     },
     {
-        path: 'suggesties',
+        path: 'suggestons',
         component: SuggestiesComponent
     }
 ];
