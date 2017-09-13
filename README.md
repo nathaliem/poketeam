@@ -17,9 +17,14 @@ Uses:
 
 @TODO:
 * Refactor code
-* Save Pokéteam in cache/localStorage
-* Make everything one language (English)
+* ~~Save Pokéteam in cache/localStorage~~
+* ~~Make everything one language (English)~~
+* Save newly added Suggestions
 
 ## Development server
+
+Run `npm install`.
+
+Run `composer install`.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
