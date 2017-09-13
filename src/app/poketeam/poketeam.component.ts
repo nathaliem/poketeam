@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, Output, AfterContentChecked, OnChanges } from '@angular/core';
 import { Pokemon } from '../pokemon.model';
 import { PoketeamSharedService } from '../poketeam.shared.service';
 import { DndModule } from 'ng2-dnd';
@@ -19,11 +19,16 @@ export class PoketeamComponent implements OnInit, AfterContentChecked {
   constructor(private poketeamService: PoketeamSharedService) { }
 
   ngOnInit() {
-      this.calculateTotalPower();
+      //this.calculateTotalPower();
+      this.getPoketeam();
   }
 
   ngAfterContentChecked() {
-      this.calculateTotalPower();
+      //this.calculateTotalPower();
+  }
+
+  getPoketeam() {
+     this.poketeam = this.poketeamService.getPoketeam();
   }
 
   addPokemonToTeam(pokemon: Pokemon) {
@@ -32,6 +37,7 @@ export class PoketeamComponent implements OnInit, AfterContentChecked {
 
   removePokemonFromTeam(pokemon: Pokemon) {
       this.poketeamService.removePokemonFromTeam(pokemon);
+      this.getPoketeam(); // Update Pokéteam
   }
 
   calculateTotalPower() {

@@ -12,8 +12,8 @@ export class PokeapiService {
   constructor(private http:Http) { }
 
   getPokemon() {
-      return this.http.get(this.url)
-                      .map(res => res.json() as Pokemon[]);
+    return this.http.get(this.url)
+                    .map(res => res.json() as Pokemon[]);
   }
 
 }
